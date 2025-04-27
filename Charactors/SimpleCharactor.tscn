@@ -1,0 +1,84 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwygwrs0xmflq"]
+
+[ext_resource type="Texture2D" uid="uid://51vvctvvqc25" path="res://Sources/Charactors/charactor_empty.png" id="1_lp3j2"]
+
+[sub_resource type="Animation" id="Animation_lp3j2"]
+resource_name = "idle"
+step = 0.0333333
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0qs2n"]
+_data = {
+&"idle": SubResource("Animation_lp3j2")
+}
+
+[node name="Root" type="Node2D"]
+
+[node name="Polygons" type="Node2D" parent="."]
+position = Vector2(-55, -123)
+
+[node name="Head" type="Polygon2D" parent="Polygons"]
+texture = ExtResource("1_lp3j2")
+polygon = PackedVector2Array(42.409, 16.9959, 36.4168, 28.5309, 37.9149, 39.317, 50.4986, 44.2606, 67.1271, 44.8598, 73.4189, 35.5718, 71.9209, 25.2352, 63.5317, 17.2955)
+uv = PackedVector2Array(42.409, 16.9959, 36.4168, 28.5309, 37.9149, 39.317, 50.4986, 44.2606, 67.1271, 44.8598, 73.4189, 35.5718, 71.9209, 25.2352, 63.5317, 17.2955)
+
+[node name="Body" type="Polygon2D" parent="Polygons"]
+texture = ExtResource("1_lp3j2")
+polygon = PackedVector2Array(41.2907, 45.5128, 31.3435, 56.3984, 32.4696, 72.5392, 40.54, 98.4395, 52.9271, 104.07, 67.9418, 100.316, 81.2673, 62.7797, 77.889, 48.8911, 69.6309, 44.0113)
+uv = PackedVector2Array(41.2907, 45.5128, 31.3435, 56.3984, 32.4696, 72.5392, 40.54, 98.4395, 52.9271, 104.07, 67.9418, 100.316, 81.2673, 62.7797, 77.889, 48.8911, 69.6309, 44.0113)
+
+[node name="HandLeft" type="Polygon2D" parent="Polygons"]
+texture = ExtResource("1_lp3j2")
+polygon = PackedVector2Array(28.8944, 66.5997, 15.5586, 66.4203, 12.5685, 72.8191, 13.1665, 80.7727, 19.5653, 85.6166, 25.9641, 86.3343, 32.7217, 79.0983, 32.7217, 70.0682)
+uv = PackedVector2Array(28.8944, 66.5997, 15.5586, 66.4203, 12.5685, 72.8191, 13.1665, 80.7727, 19.5653, 85.6166, 25.9641, 86.3343, 32.7217, 79.0983, 32.7217, 70.0682)
+
+[node name="HandRight" type="Polygon2D" parent="Polygons"]
+texture = ExtResource("1_lp3j2")
+polygon = PackedVector2Array(82.6635, 66.1568, 77.1545, 74.6322, 77.3664, 82.4719, 81.71, 88.0869, 91.7745, 85.4383, 96.8597, 80.565, 95.1647, 70.6064, 90.2913, 66.4747)
+uv = PackedVector2Array(82.6635, 66.1568, 77.1545, 74.6322, 77.3664, 82.4719, 81.71, 88.0869, 91.7745, 85.4383, 96.8597, 80.565, 95.1647, 70.6064, 90.2913, 66.4747)
+
+[node name="FootLeft" type="Polygon2D" parent="Polygons"]
+texture = ExtResource("1_lp3j2")
+polygon = PackedVector2Array(45.4478, 99.9506, 36.135, 99.871, 33.7472, 109.502, 27.9366, 117.78, 30.2449, 124.705, 41.7864, 126.536, 49.9052, 124.864, 48.4724, 114.119, 47.9152, 101.941)
+uv = PackedVector2Array(45.4478, 99.9506, 36.135, 99.871, 33.7472, 109.502, 27.9366, 117.78, 30.2449, 124.705, 41.7864, 126.536, 49.9052, 124.864, 48.4724, 114.119, 47.9152, 101.941)
+
+[node name="FootRight" type="Polygon2D" parent="Polygons"]
+texture = ExtResource("1_lp3j2")
+polygon = PackedVector2Array(67.9882, 99.3784, 56.9244, 103.358, 55.3325, 107.418, 55.3325, 117.765, 57.004, 123.337, 65.282, 125.565, 73.4007, 123.814, 76.505, 117.606, 74.2763, 112.193, 69.6597, 109.805)
+uv = PackedVector2Array(67.9882, 99.3784, 56.9244, 103.358, 55.3325, 107.418, 55.3325, 117.765, 57.004, 123.337, 65.282, 125.565, 73.4007, 123.814, 76.505, 117.606, 74.2763, 112.193, 69.6597, 109.805)
+
+[node name="Skeleton" type="Skeleton2D" parent="."]
+position = Vector2(-55, -123)
+metadata/_edit_lock_ = true
+
+[node name="body" type="Bone2D" parent="Skeleton"]
+position = Vector2(55, 83)
+rest = Transform2D(1, 0, 0, 1, 55, 83)
+
+[node name="foot_left" type="Bone2D" parent="Skeleton/body"]
+position = Vector2(-12, 25)
+rotation = 1.91419
+rest = Transform2D(-0.336688, 0.941616, -0.941616, -0.336688, -12, 25)
+
+[node name="foot_right" type="Bone2D" parent="Skeleton/body"]
+position = Vector2(8, 25)
+rotation = 1.27724
+rest = Transform2D(0.289358, 0.957221, -0.957221, 0.289358, 8, 25)
+
+[node name="hand_left" type="Bone2D" parent="Skeleton/body"]
+position = Vector2(-28, -9)
+rotation = 2.93542
+rest = Transform2D(-0.978821, 0.204716, -0.204716, -0.978821, -28, -9)
+
+[node name="hand_right" type="Bone2D" parent="Skeleton/body"]
+position = Vector2(28, -6)
+rest = Transform2D(1, 0, 0, 1, 28, -6)
+
+[node name="head" type="Bone2D" parent="Skeleton/body"]
+position = Vector2(-1, -46)
+rotation = -1.55979
+rest = Transform2D(0.0110056, -0.999939, 0.999939, 0.0110056, -1, -46)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0qs2n")
+}

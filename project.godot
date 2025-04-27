@@ -11,6 +11,13 @@ config_version=5
 [application]
 
 config/name="SillyWar"
-run/main_scene="uid://cjq8pwhu26teb"
+run/main_scene="uid://byg1mmovjy35a"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/default_filters/use_nearest_mipmap_filter=true
+textures/decals/filter=0
+textures/light_projectors/filter=0
