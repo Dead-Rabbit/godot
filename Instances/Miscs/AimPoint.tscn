@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3grbb8srbbts"]
+
+[ext_resource type="Texture2D" uid="uid://bhqy2mteoka3y" path="res://Sources/aim_point.png" id="1_do6oj"]
+[ext_resource type="Script" uid="uid://c7lofhruckbuw" path="res://Scripts/GameLogic/aim_point.gd" id="1_yduth"]
+[ext_resource type="Script" uid="uid://brkejnyx31qeq" path="res://Scripts/Plugins/RandomSprite2D.gd" id="3_aje7r"]
+
+[node name="AimPoint" type="Node2D"]
+script = ExtResource("1_yduth")
+
+[node name="RandomSprite2D" type="Sprite2D" parent="."]
+z_index = 10
+texture = ExtResource("1_do6oj")
+hframes = 6
+frame = 1
+script = ExtResource("3_aje7r")
+frame_to_refresh = 20
+max_frame = 6
+metadata/_custom_type_script = "uid://brkejnyx31qeq"

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://byg1mmovjy35a"]
+
+[ext_resource type="PackedScene" uid="uid://b3grbb8srbbts" path="res://Instances/Miscs/AimPoint.tscn" id="1_8jkkn"]
+[ext_resource type="PackedScene" uid="uid://bwygwrs0xmflq" path="res://Instances/Charactors/SimpleCharactor.tscn" id="1_icve4"]
+
+[node name="ChangeBody" type="Node2D"]
+
+[node name="BG" type="ColorRect" parent="."]
+z_index = -100
+offset_right = 1206.0
+offset_bottom = 667.0
+metadata/_edit_lock_ = true
+
+[node name="AimPoint" parent="." instance=ExtResource("1_8jkkn")]
+
+[node name="MainCharactor" parent="." instance=ExtResource("1_icve4")]
+position = Vector2(565, 416)
