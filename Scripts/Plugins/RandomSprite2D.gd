@@ -1,9 +1,9 @@
 class_name RandomAnimatedSprite2D
 extends Sprite2D
 
-@export var frame_to_refresh : int = 15
 @export var max_frame : int = 0
 
+var frame_to_refresh : int = 15
 var refresh_frame : int = 0
 var pre_anim_frame : int = 0
 
@@ -11,16 +11,16 @@ func _ready() -> void:
 	pre_anim_frame = frame
 	pass
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	refresh_frame += 1
 	if refresh_frame >= frame_to_refresh:
 		refresh_frame = 0
 
-		frame = randi() % hframes
-		
-		if pre_anim_frame == frame:
-			frame += 1
-			if frame == max_frame:
-				frame = 0
+		var next_frame : int = randi() % hframes
+		if pre_anim_frame == next_frame:
+			next_frame += 1
+			if next_frame == max_frame:
+				next_frame = 0
 			
+		frame = next_frame
 		pre_anim_frame = frame
