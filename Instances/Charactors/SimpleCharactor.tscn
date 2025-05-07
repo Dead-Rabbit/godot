@@ -142,7 +142,7 @@ _data = {
 &"idle": SubResource("Animation_0bsi0")
 }
 
-[node name="Root" type="Node2D"]
+[node name="Charactor" type="Node2D"]
 script = ExtResource("1_0bsi0")
 
 [node name="SpriteRoot" type="Node2D" parent="."]

@@ -4,3 +4,9 @@ extends Node2D
 
 func _ready() -> void:
 	anim_player.play("idle")
+	
+	
+func _process(_delta: float) -> void:
+	pass
+	
+	

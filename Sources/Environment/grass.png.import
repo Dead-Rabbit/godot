@@ -2,22 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2f4tast4sllu"
-path="res://.godot/imported/charactor_foot.png-4009f5d772b552bbb0a3a927f613ef7c.ctex"
+uid="uid://davodpc22aegc"
+path="res://.godot/imported/grass.png-b064133bde6c1e65e9836317798aa4ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sources/Charactors/charactor_foot.png"
-dest_files=["res://.godot/imported/charactor_foot.png-4009f5d772b552bbb0a3a927f613ef7c.ctex"]
+source_file="res://Sources/Environment/grass.png"
+dest_files=["res://.godot/imported/grass.png-b064133bde6c1e65e9836317798aa4ed.ctex"]
 
 [params]
 
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
