@@ -2,10 +2,6 @@
 class_name PandoraCategories
 
 
-const BODYPARTSUITS = "1"
-
-
-class BodyPartSuitsCategories:
-	const DEFAULTSUIT = "16.0"
+const BODYPARTSUITS = "24.0"
 
 
