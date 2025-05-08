@@ -38,13 +38,4 @@ func _process(delta: float) -> void:
 func set_charactor_forward(_forward : CharactorForward) -> void:
 	# 设置角色朝向
 	charactor_forward = _forward
-	match charactor_forward:
-		CharactorForward.LEFT:
-			$Sprite.scale.x = -1
-		CharactorForward.RIGHT:
-			$Sprite.scale.x = 1
-		CharactorForward.UP:
-			$Sprite.rotation_degrees = 90
-		CharactorForward.DOWN:
-			$Sprite.rotation_degrees = 0
 		

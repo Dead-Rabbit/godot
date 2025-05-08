@@ -13,6 +13,4 @@ texture = ExtResource("1_do6oj")
 hframes = 6
 frame = 1
 script = ExtResource("3_aje7r")
-frame_to_refresh = 20
-max_frame = 6
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
