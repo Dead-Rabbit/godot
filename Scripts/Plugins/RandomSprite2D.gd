@@ -1,13 +1,13 @@
 class_name RandomAnimatedSprite2D
 extends Sprite2D
 
-@export var max_frame : int = 0
-
+var max_frame : int = 0
 var frame_to_refresh : int = 18
 var refresh_frame : int = 0
 var pre_anim_frame : int = 0
 
 func _ready() -> void:
+	max_frame = hframes * vframes
 	pre_anim_frame = frame
 	pass
 
