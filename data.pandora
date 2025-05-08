@@ -1,0 +1,101 @@
+{
+	"_entity_data": {
+		"_categories": [
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_id": "1",
+				"_ids_generation_class": "BodyPartEntityIds",
+				"_index": 0,
+				"_name": "BodyPartSuits"
+			},
+			{
+				"_category_id": "1",
+				"_icon_color": "ffffff00",
+				"_id": "16.0",
+				"_index": 0,
+				"_name": "DefaultSuit"
+			}
+		],
+		"_entities": [
+			{
+				"_category_id": "16.0",
+				"_icon_color": "ffffff00",
+				"_id": "17.0",
+				"_index": 0,
+				"_name": "Head",
+				"_property_overrides": {
+					"BodyPartType": {
+						"type": "int",
+						"value": 1
+					},
+					"Source": {
+						"type": "resource",
+						"value": "res://Instances/Miscs/Data/BodyParts/body_part_head_default.tres"
+					}
+				}
+			},
+			{
+				"_category_id": "16.0",
+				"_icon_color": "ffffff00",
+				"_id": "18.0",
+				"_index": 0,
+				"_name": "Body"
+			},
+			{
+				"_category_id": "16.0",
+				"_icon_color": "ffffff00",
+				"_id": "19.0",
+				"_index": 0,
+				"_name": "Hand_Left"
+			},
+			{
+				"_category_id": "16.0",
+				"_icon_color": "ffffff00",
+				"_id": "20.0",
+				"_index": 0,
+				"_name": "Hand_Right"
+			},
+			{
+				"_category_id": "16.0",
+				"_icon_color": "ffffff00",
+				"_id": "21.0",
+				"_index": 0,
+				"_name": "Foot_Left"
+			},
+			{
+				"_category_id": "16.0",
+				"_icon_color": "ffffff00",
+				"_id": "22.0",
+				"_index": 0,
+				"_name": "Foot_Right"
+			}
+		],
+		"_properties": [
+			{
+				"_category_id": "1",
+				"_default_value": 0,
+				"_id": "13.0",
+				"_name": "BodyPartType",
+				"_setting_overrides": {
+					"Max Value": 10.0,
+					"Min Value": 0.0
+				},
+				"_type": "int"
+			},
+			{
+				"_category_id": "1",
+				"_default_value": null,
+				"_id": "14.0",
+				"_name": "Source",
+				"_type": "resource"
+			}
+		]
+	},
+	"_id_generator": {
+		"_ids_by_context": {
+			"default": 22.0
+		}
+	}
+}

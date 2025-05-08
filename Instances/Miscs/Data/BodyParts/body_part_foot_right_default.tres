@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="BodyPartSource" load_steps=3 format=3 uid="uid://duv4hjnsncjcg"]
+
+[ext_resource type="Script" uid="uid://pmo8knmc7d7c" path="res://Scripts/Data/body_part_source.gd" id="1_rmpsn"]
+[ext_resource type="Texture2D" uid="uid://d2f4tast4sllu" path="res://Sources/Charactors/charactor_foot.png" id="2_rk57s"]
+
+[resource]
+script = ExtResource("1_rmpsn")
+texture_up = ExtResource("2_rk57s")
+hFrames_up = 8
+vFrames_up = 1
+scale_up = Vector2(-1, 1)
+texture_down = ExtResource("2_rk57s")
+hFrames_down = 8
+vFrames_down = 1
+scale_down = Vector2(-1, 1)
+texture_right = ExtResource("2_rk57s")
+hFrames_right = 8
+vFrames_right = 1
+scale_right = Vector2(-1, 1)
+texture_left = ExtResource("2_rk57s")
+hFrames_left = 8
+vFrames_left = 1
+scale_left = Vector2(-1, 1)
+metadata/_custom_type_script = "uid://pmo8knmc7d7c"

@@ -31,7 +31,6 @@ position = Vector2(420, 419)
 texture = ExtResource("2_egkgu")
 hframes = 8
 script = ExtResource("3_pwe2l")
-max_frame = 8
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
 [node name="Grass2" type="Sprite2D" parent="Environment/Grass"]
@@ -39,7 +38,6 @@ position = Vector2(693, 470)
 texture = ExtResource("2_egkgu")
 hframes = 8
 script = ExtResource("3_pwe2l")
-max_frame = 8
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
 [node name="Grass3" type="Sprite2D" parent="Environment/Grass"]
@@ -47,7 +45,6 @@ position = Vector2(757, 301)
 texture = ExtResource("2_egkgu")
 hframes = 8
 script = ExtResource("3_pwe2l")
-max_frame = 8
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
 [node name="AimPoint" parent="." instance=ExtResource("1_8jkkn")]

@@ -2,18 +2,25 @@ extends Node2D
 
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 
-# 角色朝向
-enum CharactorForward {
-	LEFT,
-	RIGHT,
-	UP,
-	DOWN
-}
-var charactor_forward : CharactorForward = CharactorForward.RIGHT
+var CharactorPart = Enums.CharactorPart
 
+# 角色朝向
+var charactor_forward : Enums.CharactorForward = Enums.CharactorForward.RIGHT
+
+# 角色部位
+var charactor_body_part : Dictionary = {
+	CharactorPart.HEAD: null,
+	CharactorPart.BODY: null,
+	CharactorPart.HAND_LEFT: null,
+	CharactorPart.HAND_RIGHT: null,
+	CharactorPart.FOOT_LEFT: null,
+	CharactorPart.FOOT_RIGHT: null,
+}
+
+# 角色部位
 func _ready() -> void:
 	# 角色初始朝向
-	set_charactor_forward(CharactorForward.DOWN)
+	set_charactor_forward(Enums.CharactorForward.DOWN)
 
 func _process(delta: float) -> void:
 	var move_speed = 200
@@ -35,7 +42,16 @@ func _process(delta: float) -> void:
 		anim_player.play("idle")
 		
 	
-func set_charactor_forward(_forward : CharactorForward) -> void:
+func set_charactor_forward(_forward : Enums.CharactorForward) -> void:
 	# 设置角色朝向
 	charactor_forward = _forward
-		
+
+	
+func set_body_part_suit(suit_name) -> void:
+	
+	pass
+
+# 设置角色部位
+func set_body_part_source(body_part_type: Enums.CharactorPart, body_part_source: BodyPartSource) -> void:
+	
+	pass
