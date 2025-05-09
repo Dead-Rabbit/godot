@@ -1,3 +1,4 @@
+@tool
 extends Node2D
 
 var CharactorPart = Enums.CharactorPart
@@ -36,6 +37,9 @@ func _ready() -> void:
 	# 角色初始朝向
 	set_charactor_forward(Enums.CharactorForward.DOWN)
 
+	# 测试初始化动画
+	anim_player.play("idle_down")
+
 func _process(delta: float) -> void:
 	var move_speed = 200
 	var velocity = Vector2.ZERO
@@ -48,15 +52,26 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
 		
+	# 修改角色朝向
+	if velocity.x > 0:
+		set_charactor_forward(Enums.CharactorForward.RIGHT)
+	elif velocity.x < 0:
+		set_charactor_forward(Enums.CharactorForward.LEFT)
+	elif velocity.y > 0:
+		set_charactor_forward(Enums.CharactorForward.DOWN)
+	elif velocity.y < 0:
+		set_charactor_forward(Enums.CharactorForward.UP)
+		
 	if velocity != Vector2.ZERO:
 		velocity = velocity.normalized() * move_speed
 		position += velocity * delta
 #		anim_player.play("run")
-	else:
-		anim_player.play("idle_down")
+#	else:
+#		anim_player.play("idle_down")
 		
 		
 	
+# TODO 将部位切换的功能放到一个单独的脚本中
 # 获取角色部位精灵
 func get_body_part_sprite(body_part_type: Enums.CharactorPart) -> RandomAnimatedSprite2D:
 	match body_part_type:
@@ -105,7 +120,7 @@ func set_charactor_forward(_forward : Enums.CharactorForward) -> void:
 		var body_part_source: BodyPartSource = charactor_body_part[body_part_type]
 		if body_part_source == null:
 			continue
-
+			
 		var texture_config: Dictionary = body_part_source.get_config(_forward)
 		sprite.texture = texture_config["texture"]
 		sprite.hframes = texture_config["hFrames"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwygwrs0xmflq"]
+[gd_scene load_steps=12 format=3 uid="uid://bwygwrs0xmflq"]
 
 [ext_resource type="Script" uid="uid://dvd0e04cs3qlf" path="res://Scripts/Charactor/main_charactor.gd" id="1_0bsi0"]
+[ext_resource type="Resource" uid="uid://b2772by55ovnw" path="res://Instances/Miscs/Data/BodyPartSuits/body_part_suit_default.tres" id="2_775wm"]
 [ext_resource type="Texture2D" uid="uid://cyc3t4pmjtxwk" path="res://Sources/Charactors/charactor_body.png" id="2_ju7ad"]
 [ext_resource type="Texture2D" uid="uid://c5llsf0ko3srx" path="res://Sources/Charactors/charactor_head.png" id="3_ju7ad"]
 [ext_resource type="Texture2D" uid="uid://dwkgr3gv5wchk" path="res://Sources/Charactors/charactor_hand.png" id="4_0bsi0"]
@@ -155,6 +156,7 @@ sprite_body_part_hand_left = NodePath("SpriteRoot/Body/ControlCenter/HandLeft/Ra
 sprite_body_part_hand_right = NodePath("SpriteRoot/Body/ControlCenter/HandRight/RandSprite_HandRight")
 sprite_body_part_foot_left = NodePath("SpriteRoot/FootLeft/RandSprite_FootLeft")
 sprite_body_part_foot_right = NodePath("SpriteRoot/FootRight/RandSprite_FootRight")
+debug_body_part_suit = ExtResource("2_775wm")
 
 [node name="SpriteRoot" type="Node2D" parent="."]
 
