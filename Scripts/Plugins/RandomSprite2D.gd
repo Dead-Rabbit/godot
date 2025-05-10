@@ -24,3 +24,6 @@ func _process(_delta: float) -> void:
 			
 		frame = next_frame
 		pre_anim_frame = frame
+		
+		
+	

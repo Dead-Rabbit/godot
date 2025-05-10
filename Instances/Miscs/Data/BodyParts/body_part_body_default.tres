@@ -24,6 +24,6 @@ vFlip_right = false
 texture_left = ExtResource("3_tx2d5")
 hFrames_left = 8
 vFrames_left = 1
-hFlip_left = true
+hFlip_left = false
 vFlip_left = false
 metadata/_custom_type_script = "uid://pmo8knmc7d7c"

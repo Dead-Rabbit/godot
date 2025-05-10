@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="BodyPartSource" load_steps=3 format=3 uid="uid://duv4hjnsncjcg"]
+[gd_resource type="Resource" script_class="BodyPartSource" load_steps=4 format=3 uid="uid://duv4hjnsncjcg"]
 
 [ext_resource type="Script" uid="uid://pmo8knmc7d7c" path="res://Scripts/Data/body_part_source.gd" id="1_rmpsn"]
 [ext_resource type="Texture2D" uid="uid://d2f4tast4sllu" path="res://Sources/Charactors/charactor_foot.png" id="2_rk57s"]
+[ext_resource type="Texture2D" uid="uid://ch2bh1kgxmbng" path="res://Sources/Charactors/charactor_foot_right.png" id="3_itru1"]
 
 [resource]
 script = ExtResource("1_rmpsn")
@@ -15,14 +16,14 @@ hFrames_down = 8
 vFrames_down = 1
 hFlip_down = true
 vFlip_down = false
-texture_right = ExtResource("2_rk57s")
+texture_right = ExtResource("3_itru1")
 hFrames_right = 8
 vFrames_right = 1
-hFlip_right = true
+hFlip_right = false
 vFlip_right = false
-texture_left = ExtResource("2_rk57s")
+texture_left = ExtResource("3_itru1")
 hFrames_left = 8
 vFrames_left = 1
-hFlip_left = true
+hFlip_left = false
 vFlip_left = false
 metadata/_custom_type_script = "uid://pmo8knmc7d7c"
