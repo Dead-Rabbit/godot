@@ -28,13 +28,13 @@ func _process(_delta: float) -> void:
 		frame = next_frame
 		pre_anim_frame = frame
 		
-	# 更新场景的order
-	var main_charactor : MainCharactor = GameGlobal.GMainCharactor
-	if is_environment and main_charactor:
-		if global_position.y > main_charactor.global_position.y:
-			z_index = 10
-		else:
-			z_index = main_charactor.z_index - 1
-	else:
-		z_index = 1
+#	# 更新场景的order
+#	var main_charactor : MainCharactor = GameGlobal.GMainCharactor
+#	if is_environment and main_charactor:
+#		if global_position.y > main_charactor.global_position.y:
+#			z_index = 10
+#		else:
+#			z_index = main_charactor.z_index - 1
+#	else:
+#		z_index = 1
 		
