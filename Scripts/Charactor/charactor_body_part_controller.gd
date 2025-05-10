@@ -3,8 +3,6 @@
 class_name CharactorBodyPartController
 extends Node2D
 
-var CharactorPart = Enums.CharactorPart
-
 @export_group("身体部位")
 @export var body_part_head: CharactorBodyPart
 @export var body_part_body: CharactorBodyPart
@@ -12,47 +10,43 @@ var CharactorPart = Enums.CharactorPart
 @export var body_part_hand_right: CharactorBodyPart
 @export var body_part_foot_left: CharactorBodyPart
 @export var body_part_foot_right: CharactorBodyPart
-@export var body_part_dic: Dictionary = {
-	CharactorPart.HEAD: null,
-	CharactorPart.BODY: null,
-	CharactorPart.HAND_LEFT: null,
-	CharactorPart.HAND_RIGHT: null,
-	CharactorPart.FOOT_LEFT: null,
-	CharactorPart.FOOT_RIGHT: null
+var body_part_dic: Dictionary = {
+	Enums.CharactorPart.HEAD: null,
+	Enums.CharactorPart.BODY: null,
+	Enums.CharactorPart.HAND_LEFT: null,
+	Enums.CharactorPart.HAND_RIGHT: null,
+	Enums.CharactorPart.FOOT_LEFT: null,
+	Enums.CharactorPart.FOOT_RIGHT: null
 }
 
 # 角色部位
 var body_part_source_map: Dictionary = {
-	CharactorPart.HEAD: null,
-	CharactorPart.BODY: null,
-	CharactorPart.HAND_LEFT: null,
-	CharactorPart.HAND_RIGHT: null,
-	CharactorPart.FOOT_LEFT: null,
-	CharactorPart.FOOT_RIGHT: null,
+   Enums.CharactorPart.HEAD: null,
+   Enums.CharactorPart.BODY: null,
+   Enums.CharactorPart.HAND_LEFT: null,
+   Enums.CharactorPart.HAND_RIGHT: null,
+   Enums.CharactorPart.FOOT_LEFT: null,
+   Enums.CharactorPart.FOOT_RIGHT: null,
 }
 
-func _ready() -> void:
-	pass
 
-# TODO 将部位切换的功能放到一个单独的脚本中
+func _ready() -> void:
+	set_body_part_dic_cache(Enums.CharactorPart.HEAD, body_part_head)
+	set_body_part_dic_cache(Enums.CharactorPart.BODY, body_part_body)
+	set_body_part_dic_cache(Enums.CharactorPart.HAND_LEFT, body_part_hand_left)
+	set_body_part_dic_cache(Enums.CharactorPart.HAND_RIGHT, body_part_hand_right)
+	set_body_part_dic_cache(Enums.CharactorPart.FOOT_LEFT, body_part_foot_left)
+	set_body_part_dic_cache(Enums.CharactorPart.FOOT_RIGHT, body_part_foot_right)
+
+
+func set_body_part_dic_cache(part_type: Enums.CharactorPart, part: CharactorBodyPart) -> void:
+	body_part_dic[part_type] = part
+	part.body_part_type = part_type
+	
+
 # 获取角色部位精灵
 func get_body_part_sprite(body_part_type: Enums.CharactorPart) -> RandomAnimatedSprite2D:
-	match body_part_type:
-		CharactorPart.HEAD:
-			return body_part_head.sprite
-		CharactorPart.BODY:
-			return body_part_body.sprite
-		CharactorPart.HAND_LEFT:
-			return body_part_hand_left.sprite
-		CharactorPart.HAND_RIGHT:
-			return body_part_hand_right.sprite
-		CharactorPart.FOOT_LEFT:
-			return body_part_foot_left.sprite
-		CharactorPart.FOOT_RIGHT:
-			return body_part_foot_right.sprite
-		_:
-			print("get_body_part_sprite: invalid body part type")
-	return null
+	return body_part_dic[body_part_type].sprite
 
 
 # 设置一个套装
@@ -70,8 +64,8 @@ func set_body_part_source(body_part_type: Enums.CharactorPart, body_part_source:
 
 # 设置角色朝向
 func set_charactor_forward(_forward: Enums.CharactorForward) -> void:
-	for body_part_type_key in CharactorPart:
-		var body_part_type                 = CharactorPart[body_part_type_key]
+	for body_part_type_key in Enums.CharactorPart:
+		var body_part_type = Enums.CharactorPart[body_part_type_key]
 		var sprite: RandomAnimatedSprite2D = get_body_part_sprite(body_part_type)
 		if sprite == null:
 			continue
@@ -89,26 +83,28 @@ func set_charactor_forward(_forward: Enums.CharactorForward) -> void:
 
 		
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		pass
 		
-	pass
-	
+	update_sort_order()
 	
 
 #region Sort Order
 	
 # 设置角色部位的排序
 func update_sort_order() -> void:
-	var sort_order: int = 0
-	for body_part_type_key in CharactorPart:
-		var body_part_type: Enums.CharactorPart = CharactorPart[body_part_type_key]
-		var sprite: RandomAnimatedSprite2D = get_body_part_sprite(body_part_type)
-		if sprite == null:
-			continue
+	var children: Array[Node] = get_children()
+	for child in children:
+		if child is CharactorBodyPart:
+			if child.body_part_type == Enums.CharactorPart.HEAD:
+				move_child(child, 1)
+	
+#	for body_part_type_key in Enums.CharactorPart:
+#		var body_part: CharactorBodyPart = body_part_dic[body_part_type_key]
+#		var order = body_part.sort_order
 
-		sprite.sort_order = sort_order
-		sort_order += 1
+#		sprite.sort_order = sort_order
+#		sort_order += 1
 	
 #endregion Sort Order
