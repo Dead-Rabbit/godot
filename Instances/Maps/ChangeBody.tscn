@@ -30,7 +30,7 @@ offset_bottom = 667.0
 metadata/_edit_lock_ = true
 
 [node name="MainCharactor" parent="Environment" instance=ExtResource("1_icve4")]
-position = Vector2(473, 419)
+position = Vector2(517, 439)
 
 [node name="Grass" type="Sprite2D" parent="Environment"]
 y_sort_enabled = true
@@ -38,7 +38,7 @@ position = Vector2(420, 419)
 texture = ExtResource("2_egkgu")
 offset = Vector2(0, -20)
 hframes = 8
-frame = 2
+frame = 1
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
@@ -57,7 +57,7 @@ position = Vector2(552, 376)
 texture = ExtResource("2_egkgu")
 offset = Vector2(0, -20)
 hframes = 8
-frame = 5
+frame = 1
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
@@ -67,16 +67,16 @@ position = Vector2(439, 429)
 texture = ExtResource("2_egkgu")
 offset = Vector2(0, -20)
 hframes = 8
-frame = 6
+frame = 3
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
 [node name="Tree" type="Sprite2D" parent="Environment"]
 position = Vector2(450, 426)
-scale = Vector2(2, 2)
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("6_pwe2l")
 offset = Vector2(0, -59.34)
 hframes = 5
-frame = 1
+frame = 3
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
