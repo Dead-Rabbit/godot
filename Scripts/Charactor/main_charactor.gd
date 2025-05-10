@@ -3,7 +3,7 @@ class_name MainCharactor
 
 var CharactorPart = Enums.CharactorPart
 
-@export var charactor_body_part: CharactorBodyPart
+@onready var charactor_body_part_controller: CharactorBodyPartController = $SpriteRoot
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 
 # 移动速度
@@ -19,7 +19,7 @@ func _ready() -> void:
 	if suit_default_entity:
 		var body_part_resource: BodyPartSuit = suit_default_entity.get_resource("body_part_source") as BodyPartSuit
 		if body_part_resource:
-			charactor_body_part.set_body_part_suit(body_part_resource)
+			charactor_body_part_controller.set_body_part_suit(body_part_resource)
 	
 	# 角色初始朝向
 	set_charactor_forward(Enums.CharactorForward.DOWN)
@@ -59,7 +59,7 @@ func set_charactor_forward(_forward : Enums.CharactorForward) -> void:
 		return
 		
 	charactor_forward = _forward
-	charactor_body_part.set_charactor_forward(charactor_forward)
+	charactor_body_part_controller.set_charactor_forward(charactor_forward)
 	update_animation()
 
 
@@ -76,7 +76,7 @@ func update_animation() -> void:
 		else:
 			anim_name = "idle_down"
 	
-		$SpriteRoot.scale.x = (-1 if charactor_forward == Enums.CharactorForward.UP else 1)
+#		$SpriteRoot.scale.x = (-1 if charactor_forward == Enums.CharactorForward.UP else 1)
 	
 	elif charactor_forward == Enums.CharactorForward.LEFT \
 		or charactor_forward == Enums.CharactorForward.RIGHT:
@@ -86,7 +86,7 @@ func update_animation() -> void:
 		else:
 			anim_name = "idle_right"
 
-		$SpriteRoot.scale.x = (-1 if charactor_forward == Enums.CharactorForward.LEFT else 1)
+#		$SpriteRoot.scale.x = (-1 if charactor_forward == Enums.CharactorForward.LEFT else 1)
 
 	if pre_animation_name == anim_name:
 		return

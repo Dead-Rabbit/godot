@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://bwygwrs0xmflq"]
+[gd_scene load_steps=16 format=3 uid="uid://bwygwrs0xmflq"]
 
 [ext_resource type="Script" uid="uid://dvd0e04cs3qlf" path="res://Scripts/Charactor/main_charactor.gd" id="1_0bsi0"]
-[ext_resource type="Script" uid="uid://c806bxi8ak52e" path="res://Scripts/Charactor/charactor_body_part.gd" id="2_775wm"]
+[ext_resource type="Script" uid="uid://c806bxi8ak52e" path="res://Scripts/Charactor/charactor_body_part_controller.gd" id="2_775wm"]
 [ext_resource type="Texture2D" uid="uid://cyc3t4pmjtxwk" path="res://Sources/Charactors/charactor_body.png" id="2_ju7ad"]
 [ext_resource type="Texture2D" uid="uid://c5llsf0ko3srx" path="res://Sources/Charactors/charactor_head.png" id="3_ju7ad"]
+[ext_resource type="Script" uid="uid://4wpvfjofwgkg" path="res://Scripts/Charactor/charactor_body_part.gd" id="3_v0hu0"]
 [ext_resource type="Texture2D" uid="uid://dwkgr3gv5wchk" path="res://Sources/Charactors/charactor_hand.png" id="4_0bsi0"]
 [ext_resource type="Script" uid="uid://brkejnyx31qeq" path="res://Scripts/Plugins/RandomSprite2D.gd" id="4_2ximk"]
 [ext_resource type="Texture2D" uid="uid://d2f4tast4sllu" path="res://Sources/Charactors/charactor_foot.png" id="6_0bsi0"]
@@ -45,51 +46,64 @@ _data = {
 &"move_right": SubResource("Animation_kp68e")
 }
 
-[node name="Charactor" type="Node2D" node_paths=PackedStringArray("charactor_body_part")]
+[node name="Charactor" type="Node2D"]
 script = ExtResource("1_0bsi0")
-charactor_body_part = NodePath("SpriteRoot")
 
-[node name="SpriteRoot" type="Node2D" parent="." node_paths=PackedStringArray("sprite_body_part_head", "sprite_body_part_body", "sprite_body_part_hand_left", "sprite_body_part_hand_right", "sprite_body_part_foot_left", "sprite_body_part_foot_right")]
+[node name="SpriteRoot" type="Node2D" parent="." node_paths=PackedStringArray("body_part_head", "body_part_body", "body_part_hand_left", "body_part_hand_right", "body_part_foot_left", "body_part_foot_right")]
 script = ExtResource("2_775wm")
-sprite_body_part_head = NodePath("Head/RandSprite_Head")
-sprite_body_part_body = NodePath("Body/RandSprite_Body")
-sprite_body_part_hand_left = NodePath("HandLeft/RandSprite_HandLeft")
-sprite_body_part_hand_right = NodePath("HandRight/RandSprite_HandRight")
-sprite_body_part_foot_left = NodePath("FootLeft/RandSprite_FootLeft")
-sprite_body_part_foot_right = NodePath("FootRight/RandSprite_FootRight")
+body_part_head = NodePath("Head")
+body_part_body = NodePath("Body")
+body_part_hand_left = NodePath("HandLeft")
+body_part_hand_right = NodePath("HandRight")
+body_part_foot_left = NodePath("FootLeft")
+body_part_foot_right = NodePath("FootRight")
 
-[node name="Body" type="Node2D" parent="SpriteRoot"]
-position = Vector2(-2, -50)
+[node name="Body" type="Node2D" parent="SpriteRoot" node_paths=PackedStringArray("sprite")]
+position = Vector2(0, -50)
+script = ExtResource("3_v0hu0")
+sprite = NodePath("RandSprite_Body")
 
 [node name="RandSprite_Body" type="Sprite2D" parent="SpriteRoot/Body"]
 texture = ExtResource("2_ju7ad")
 hframes = 8
+frame = 4
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
-[node name="Head" type="Node2D" parent="SpriteRoot"]
-position = Vector2(-2, -83)
+[node name="Head" type="Node2D" parent="SpriteRoot" node_paths=PackedStringArray("sprite")]
+position = Vector2(0, -91)
+script = ExtResource("3_v0hu0")
+sprite = NodePath("RandSprite_Head")
+sort_order = 1
 
 [node name="RandSprite_Head" type="Sprite2D" parent="SpriteRoot/Head"]
 texture = ExtResource("3_ju7ad")
 hframes = 8
+frame = 6
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
-[node name="HandLeft" type="Node2D" parent="SpriteRoot"]
-position = Vector2(-27, -56)
+[node name="HandLeft" type="Node2D" parent="SpriteRoot" node_paths=PackedStringArray("sprite")]
+position = Vector2(-27, -51)
+script = ExtResource("3_v0hu0")
+sprite = NodePath("RandSprite_HandLeft")
+sort_order = 1
 
 [node name="RandSprite_HandLeft" type="Sprite2D" parent="SpriteRoot/HandLeft"]
 texture = ExtResource("4_0bsi0")
 hframes = 8
+frame = 4
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
-[node name="HandRight" type="Node2D" parent="SpriteRoot"]
-position = Vector2(18, -52)
+[node name="HandRight" type="Node2D" parent="SpriteRoot" node_paths=PackedStringArray("sprite")]
+position = Vector2(26, -52)
+script = ExtResource("3_v0hu0")
+sprite = NodePath("RandSprite_HandRight")
+sort_order = 1
 
 [node name="RandSprite_HandRight" type="Sprite2D" parent="SpriteRoot/HandRight"]
 texture = ExtResource("4_0bsi0")
@@ -103,23 +117,31 @@ metadata/_edit_lock_ = true
 position = Vector2(-8.525, -4.285)
 rotation = 0.833766
 
-[node name="FootLeft" type="Node2D" parent="SpriteRoot"]
+[node name="FootLeft" type="Node2D" parent="SpriteRoot" node_paths=PackedStringArray("sprite")]
 position = Vector2(-13, -11)
+script = ExtResource("3_v0hu0")
+sprite = NodePath("RandSprite_FootLeft")
+sort_order = 1
 
 [node name="RandSprite_FootLeft" type="Sprite2D" parent="SpriteRoot/FootLeft"]
 texture = ExtResource("6_0bsi0")
 hframes = 8
+frame = 1
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
-[node name="FootRight" type="Node2D" parent="SpriteRoot"]
+[node name="FootRight" type="Node2D" parent="SpriteRoot" node_paths=PackedStringArray("sprite")]
 position = Vector2(15, -12)
+script = ExtResource("3_v0hu0")
+sprite = NodePath("RandSprite_FootRight")
+sort_order = 1
 
 [node name="RandSprite_FootRight" type="Sprite2D" parent="SpriteRoot/FootRight"]
 texture = ExtResource("6_0bsi0")
 flip_h = true
 hframes = 8
+frame = 1
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true

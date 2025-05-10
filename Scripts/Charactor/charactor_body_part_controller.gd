@@ -1,0 +1,114 @@
+@tool
+
+class_name CharactorBodyPartController
+extends Node2D
+
+var CharactorPart = Enums.CharactorPart
+
+@export_group("身体部位")
+@export var body_part_head: CharactorBodyPart
+@export var body_part_body: CharactorBodyPart
+@export var body_part_hand_left: CharactorBodyPart
+@export var body_part_hand_right: CharactorBodyPart
+@export var body_part_foot_left: CharactorBodyPart
+@export var body_part_foot_right: CharactorBodyPart
+@export var body_part_dic: Dictionary = {
+	CharactorPart.HEAD: null,
+	CharactorPart.BODY: null,
+	CharactorPart.HAND_LEFT: null,
+	CharactorPart.HAND_RIGHT: null,
+	CharactorPart.FOOT_LEFT: null,
+	CharactorPart.FOOT_RIGHT: null
+}
+
+# 角色部位
+var body_part_source_map: Dictionary = {
+	CharactorPart.HEAD: null,
+	CharactorPart.BODY: null,
+	CharactorPart.HAND_LEFT: null,
+	CharactorPart.HAND_RIGHT: null,
+	CharactorPart.FOOT_LEFT: null,
+	CharactorPart.FOOT_RIGHT: null,
+}
+
+func _ready() -> void:
+	pass
+
+# TODO 将部位切换的功能放到一个单独的脚本中
+# 获取角色部位精灵
+func get_body_part_sprite(body_part_type: Enums.CharactorPart) -> RandomAnimatedSprite2D:
+	match body_part_type:
+		CharactorPart.HEAD:
+			return body_part_head.sprite
+		CharactorPart.BODY:
+			return body_part_body.sprite
+		CharactorPart.HAND_LEFT:
+			return body_part_hand_left.sprite
+		CharactorPart.HAND_RIGHT:
+			return body_part_hand_right.sprite
+		CharactorPart.FOOT_LEFT:
+			return body_part_foot_left.sprite
+		CharactorPart.FOOT_RIGHT:
+			return body_part_foot_right.sprite
+		_:
+			print("get_body_part_sprite: invalid body part type")
+	return null
+
+
+# 设置一个套装
+func set_body_part_suit(body_part_suit: BodyPartSuit) -> void:
+	var body_part_list: Array[BodyPartSuitSource] = body_part_suit.body_part_list
+	for body_part_suit_source: BodyPartSuitSource in body_part_list:
+		var body_part_type: Enums.CharactorPart = body_part_suit_source.body_part_type
+		set_body_part_source(body_part_type, body_part_suit_source.body_part_source as BodyPartSource)
+
+
+# 设置角色部位
+func set_body_part_source(body_part_type: Enums.CharactorPart, body_part_source: BodyPartSource) -> void:
+	body_part_source_map[body_part_type] = body_part_source
+
+
+# 设置角色朝向
+func set_charactor_forward(_forward: Enums.CharactorForward) -> void:
+	for body_part_type_key in CharactorPart:
+		var body_part_type                 = CharactorPart[body_part_type_key]
+		var sprite: RandomAnimatedSprite2D = get_body_part_sprite(body_part_type)
+		if sprite == null:
+			continue
+
+		var body_part_source: BodyPartSource = body_part_source_map[body_part_type]
+		if body_part_source == null:
+			continue
+
+		var texture_config: Dictionary = body_part_source.get_config(_forward)
+		sprite.texture = texture_config["texture"]
+		sprite.hframes = texture_config["hFrames"]
+		sprite.vframes = texture_config["vFrames"]
+		sprite.flip_h = texture_config["hFlip"]
+		sprite.flip_v = texture_config["vFlip"]
+
+		
+	
+func _process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		pass
+		
+	pass
+	
+	
+
+#region Sort Order
+	
+# 设置角色部位的排序
+func update_sort_order() -> void:
+	var sort_order: int = 0
+	for body_part_type_key in CharactorPart:
+		var body_part_type: Enums.CharactorPart = CharactorPart[body_part_type_key]
+		var sprite: RandomAnimatedSprite2D = get_body_part_sprite(body_part_type)
+		if sprite == null:
+			continue
+
+		sprite.sort_order = sort_order
+		sort_order += 1
+	
+#endregion Sort Order
