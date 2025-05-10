@@ -1,9 +1,9 @@
 extends Node2D
+class_name MainCharactor
 
 var CharactorPart = Enums.CharactorPart
 
 @export var charactor_body_part: CharactorBodyPart
-
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 
 # 移动速度
@@ -13,6 +13,8 @@ var charactor_forward : Enums.CharactorForward = Enums.CharactorForward.NONE
 
 # 角色部位
 func _ready() -> void:
+	GameGlobal.GMainCharactor = self
+	
 	var suit_default_entity = Pandora.get_entity(BodyPartEntityIds.BODYPARTSUIT_DEFAULT)
 	if suit_default_entity:
 		var body_part_resource: BodyPartSuit = suit_default_entity.get_resource("body_part_source") as BodyPartSuit
