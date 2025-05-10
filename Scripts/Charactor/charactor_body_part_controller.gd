@@ -95,16 +95,24 @@ func _process(_delta: float) -> void:
 # 设置角色部位的排序
 func update_sort_order() -> void:
 	var children: Array[Node] = get_children()
+	
+	var body_part_list: Array[CharactorBodyPart] = []
 	for child in children:
 		if child is CharactorBodyPart:
-			if child.body_part_type == Enums.CharactorPart.HEAD:
-				move_child(child, 1)
+			body_part_list.append(child)
 	
-#	for body_part_type_key in Enums.CharactorPart:
-#		var body_part: CharactorBodyPart = body_part_dic[body_part_type_key]
-#		var order = body_part.sort_order
-
-#		sprite.sort_order = sort_order
-#		sort_order += 1
+	for i in range(body_part_list.size() - 1):
+		var child: CharactorBodyPart = body_part_list[i] as CharactorBodyPart
+		var child_index: int = child.get_index()
+		var target_index: int = child_index
+		for j in range(i + 1, body_part_list.size()):
+			var next_child: CharactorBodyPart = body_part_list[j] as CharactorBodyPart
+			if child.sort_order > next_child.sort_order:
+				var next_child_index: int = next_child.get_index()
+				target_index = next_child_index
+		
+		if target_index > child_index:
+			move_child(child, target_index)
+		
 	
 #endregion Sort Order

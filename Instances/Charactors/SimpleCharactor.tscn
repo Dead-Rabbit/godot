@@ -62,11 +62,12 @@ body_part_foot_right = NodePath("FootRight")
 position = Vector2(0, -50)
 script = ExtResource("3_v0hu0")
 sprite = NodePath("RandSprite_Body")
-sort_order = 5
+sort_order = 1
 
 [node name="RandSprite_Body" type="Sprite2D" parent="SpriteRoot/Body"]
 texture = ExtResource("2_ju7ad")
 hframes = 8
+frame = 1
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -75,12 +76,12 @@ metadata/_edit_lock_ = true
 position = Vector2(0, -83)
 script = ExtResource("3_v0hu0")
 sprite = NodePath("RandSprite_Head")
-sort_order = 1
+sort_order = 2
 
 [node name="RandSprite_Head" type="Sprite2D" parent="SpriteRoot/Head"]
 texture = ExtResource("3_ju7ad")
 hframes = 8
-frame = 5
+frame = 2
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -89,12 +90,11 @@ metadata/_edit_lock_ = true
 position = Vector2(-27, -51)
 script = ExtResource("3_v0hu0")
 sprite = NodePath("RandSprite_HandLeft")
-sort_order = 10
+sort_order = 3
 
 [node name="RandSprite_HandLeft" type="Sprite2D" parent="SpriteRoot/HandLeft"]
 texture = ExtResource("4_0bsi0")
 hframes = 8
-frame = 2
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -103,13 +103,13 @@ metadata/_edit_lock_ = true
 position = Vector2(26, -52)
 script = ExtResource("3_v0hu0")
 sprite = NodePath("RandSprite_HandRight")
-sort_order = 10
+sort_order = 3
 
 [node name="RandSprite_HandRight" type="Sprite2D" parent="SpriteRoot/HandRight"]
 texture = ExtResource("4_0bsi0")
 flip_h = true
 hframes = 8
-frame = 4
+frame = 7
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -122,12 +122,12 @@ rotation = 0.833766
 position = Vector2(-13, -11)
 script = ExtResource("3_v0hu0")
 sprite = NodePath("RandSprite_FootLeft")
-sort_order = 10
+sort_order = 3
 
 [node name="RandSprite_FootLeft" type="Sprite2D" parent="SpriteRoot/FootLeft"]
 texture = ExtResource("6_0bsi0")
 hframes = 8
-frame = 2
+frame = 6
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -136,13 +136,12 @@ metadata/_edit_lock_ = true
 position = Vector2(15, -12)
 script = ExtResource("3_v0hu0")
 sprite = NodePath("RandSprite_FootRight")
-sort_order = 10
+sort_order = 3
 
 [node name="RandSprite_FootRight" type="Sprite2D" parent="SpriteRoot/FootRight"]
 texture = ExtResource("6_0bsi0")
 flip_h = true
 hframes = 8
-frame = 4
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
