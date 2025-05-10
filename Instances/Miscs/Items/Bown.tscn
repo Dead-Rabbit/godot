@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba5on10lmrabg"]
+
+[ext_resource type="Texture2D" uid="uid://bmssevur04mpf" path="res://Sources/Items/bown.png" id="1_rrmyx"]
+[ext_resource type="Script" uid="uid://brkejnyx31qeq" path="res://Scripts/Plugins/RandomSprite2D.gd" id="1_x15cv"]
+
+[node name="Bown" type="Node2D"]
+
+[node name="BownSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_rrmyx")
+hframes = 8
+script = ExtResource("1_x15cv")
+metadata/_custom_type_script = "uid://brkejnyx31qeq"

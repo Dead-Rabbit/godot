@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwygwrs0xmflq"]
+[gd_scene load_steps=15 format=3 uid="uid://bwygwrs0xmflq"]
 
 [ext_resource type="Script" uid="uid://dvd0e04cs3qlf" path="res://Scripts/Charactor/main_charactor.gd" id="1_0bsi0"]
 [ext_resource type="Script" uid="uid://c806bxi8ak52e" path="res://Scripts/Charactor/charactor_body_part.gd" id="2_775wm"]
@@ -7,990 +7,34 @@
 [ext_resource type="Texture2D" uid="uid://dwkgr3gv5wchk" path="res://Sources/Charactors/charactor_hand.png" id="4_0bsi0"]
 [ext_resource type="Script" uid="uid://brkejnyx31qeq" path="res://Scripts/Plugins/RandomSprite2D.gd" id="4_2ximk"]
 [ext_resource type="Texture2D" uid="uid://d2f4tast4sllu" path="res://Sources/Charactors/charactor_foot.png" id="6_0bsi0"]
-[ext_resource type="Script" uid="uid://co8603q2ydeqb" path="res://Scripts/Debug/debug_z_offset.gd" id="7_v0hu0"]
-[ext_resource type="PackedScene" uid="uid://co5fv6xgkmj2h" path="res://Instances/Debug/debug_label.tscn" id="8_kp68e"]
+[ext_resource type="PackedScene" uid="uid://ba5on10lmrabg" path="res://Instances/Miscs/Items/Bown.tscn" id="9_kp68e"]
 
 [sub_resource type="Animation" id="Animation_775wm"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteRoot/Body:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -54.775)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteRoot/Body/Head:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -44.635)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteRoot/Body/ControlCenter:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -5.94)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-35.94, 2)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(35.525, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("SpriteRoot/FootLeft:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-11.52, -10.965)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("SpriteRoot/FootRight:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(13.43, -11.045)]
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteRoot/Body:position:x")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/8/type = "bezier"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("SpriteRoot/Body:position:y")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-54.775, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/9/type = "bezier"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SpriteRoot/FootLeft:position:x")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-11.52, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/10/type = "bezier"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SpriteRoot/FootLeft:position:y")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-10.965, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/11/type = "bezier"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("SpriteRoot/FootRight:position:x")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(13.43, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/12/type = "bezier"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("SpriteRoot/FootRight:position:y")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-11.045, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/13/type = "bezier"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position:x")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(35.525, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/14/type = "bezier"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position:y")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/15/type = "bezier"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position:x")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-35.94, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/16/type = "bezier"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position:y")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(2, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/17/type = "bezier"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("SpriteRoot/Body/Head:position:x")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/18/type = "bezier"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("SpriteRoot/Body/Head:position:y")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-44.635, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/19/type = "bezier"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("SpriteRoot/Body/ControlCenter:position:x")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/20/type = "bezier"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("SpriteRoot/Body/ControlCenter:position:y")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-5.94, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("SpriteRoot/FootLeft:scale")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/22/type = "value"
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/path = NodePath("SpriteRoot/FootRight:scale")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/23/type = "value"
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:scale")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/24/type = "value"
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:scale")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/25/type = "value"
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/path = NodePath("SpriteRoot/Body:scale")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/26/type = "value"
-tracks/26/imported = false
-tracks/26/enabled = true
-tracks/26/path = NodePath("SpriteRoot/Body/Head:scale")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_0bsi0"]
 resource_name = "idle"
 length = 2.0
 loop_mode = 1
 step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteRoot/Body:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.933333, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, -54.775), Vector2(-3.251, -52.224), Vector2(0, -54.775)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteRoot/Body/Head:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.73, 1.36, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, -44.635), Vector2(0, -43.13), Vector2(-1.415, -46.047), Vector2(0, -44.635)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteRoot/Body/ControlCenter:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -5.94), Vector2(0, -5.94)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.65, 1.32, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-35.94, 2), Vector2(-36.885, 2), Vector2(-35.106, 5.665), Vector2(-35.94, 2)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.65, 1.32, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(35.525, 0), Vector2(36.635, 0), Vector2(35.369, -1.445), Vector2(35.525, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("SpriteRoot/FootRight:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(13.43, -11.045), Vector2(13.43, -11.045)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("SpriteRoot/FootLeft:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-11.52, -10.965), Vector2(-11.52, -10.965)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteRoot/Body:scale")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("SpriteRoot/Body/Head:scale")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:scale")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:scale")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("SpriteRoot/FootLeft:scale")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("SpriteRoot/FootRight:scale")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_4keul"]
 resource_name = "idle_right"
 length = 2.0
 loop_mode = 1
 step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteRoot/Body:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -54.775), Vector2(0, -54.775)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteRoot/Body/ControlCenter:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -5.94), Vector2(0, -5.94)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(5, 10.715), Vector2(5, 10.715)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 12.715), Vector2(1, 12.715)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteRoot/Body/Head:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -44.635), Vector2(0, -44.635)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("SpriteRoot/FootLeft:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -11), Vector2(0, -11)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("SpriteRoot/FootRight:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -11), Vector2(0, -11)]
-}
 
 [sub_resource type="Animation" id="Animation_v0hu0"]
 resource_name = "move_down"
 length = 2.0
 loop_mode = 1
 step = 0.0333333
-capture_included = true
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteRoot/Body:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteRoot/Body:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-54.775, -0.25, 0, 0.25, 0, -54.775, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteRoot/FootLeft:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 2, 1),
-"points": PackedFloat32Array(-11.52, 0, 0, 0, 0, -6, 0, 0, 0, 0, -11.52, 0, 0, 0, 0, -11, 0, 0, 0, 0, -11, 0, 0, 0, 0, -11.52, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5, 1, 1.28, 1.5, 2)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteRoot/FootLeft:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 2, 1),
-"points": PackedFloat32Array(-10.965, 0, 0, 0, 0, -26, 0, 0, 0, 0, -10.965, 0, 0, 0, 0, -12, 0, 0, 0, 0, 1, 0, 0, 0, 0, -10.965, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5, 1, 1.28, 1.5, 2)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteRoot/FootRight:position:x")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(1, 1, 2, 2, 2, 1),
-"points": PackedFloat32Array(13.43, 0, 0, 0, 0, 12, 0, 0, 0, 0, 13, 0, 0, 0, 0, 13.43, 0, 0, 0, 0, 8, 0, 0, 0, 0, 13.43, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.23, 0.5, 1, 1.5, 2)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("SpriteRoot/FootRight:position:y")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(1, 1, 2, 2, 2, 1),
-"points": PackedFloat32Array(-11.045, 0, 0, 0, 0, -13, 0, 0, 0, 0, -2, 0, 0, 0, 0, -11.045, 0, 0, 0, 0, -25, 0, 0, 0, 0, -11.045, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.23, 0.5, 1, 1.5, 2)
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position:x")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2, 2, 0),
-"points": PackedFloat32Array(29, -0.25, 0, 0.25, 0, 26, -0.25, 0, 0.25, 0, 29, -0.25, 0, 0.25, 0, 25, -0.25, 0, 0.25, 0, 29, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position:y")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2, 2, 0),
-"points": PackedFloat32Array(10.715, -0.25, 0, 0.25, 0, -3.285, -0.25, 0, 0.25, 0, 10.715, -0.25, 0, 0.25, 0, -1.285, -0.25, 0, 0.25, 0, 10.715, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
-}
-tracks/8/type = "bezier"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position:x")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2, 2, 0),
-"points": PackedFloat32Array(-28, -0.25, 0, 0.25, 0, -21, -0.25, 0, 0.25, 0, -28, -0.25, 0, 0.25, 0, -22, -0.25, 0, 0.25, 0, -28, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
-}
-tracks/9/type = "bezier"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position:y")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"handle_modes": PackedInt32Array(0, 2, 2, 2, 0),
-"points": PackedFloat32Array(13.715, -0.25, 0, 0.25, 0, 4.715, -0.25, 0, 0.25, 0, 13.715, -0.25, 0, 0.25, 0, 2.715, -0.25, 0, 0.25, 0, 13.715, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2)
-}
-tracks/10/type = "bezier"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SpriteRoot/Body/Head:position:x")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2)
-}
-tracks/11/type = "bezier"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("SpriteRoot/Body/Head:position:y")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-44.635, -0.25, 0, 0.25, 0, -44.635, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2)
-}
-tracks/12/type = "bezier"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("SpriteRoot/Body/ControlCenter:position:x")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/13/type = "bezier"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("SpriteRoot/Body/ControlCenter:position:y")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-5.94, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("SpriteRoot/FootLeft:scale")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.84, 0.84), Vector2(1, 1), Vector2(1.16, 1.16), Vector2(1, 1)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("SpriteRoot/FootRight:scale")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.14, 1.14), Vector2(1, 1), Vector2(0.87, 0.87), Vector2(1, 1)]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:scale")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.85, 0.85), Vector2(1, 1), Vector2(1.15, 1.15), Vector2(1, 1)]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:scale")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.15, 1.15), Vector2(1, 1), Vector2(0.84, 0.84), Vector2(1, 1)]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:z_index")
-tracks/18/interp = 0
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(0, 1, 1.1, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 2,
-"values": [2, 2, 0, 0, 2]
-}
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:z_index")
-tracks/19/interp = 0
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"times": PackedFloat32Array(0, 0.08, 0.5, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 2,
-"values": [2, 0, 0, 2, 2]
-}
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("SpriteRoot/FootLeft:z_index")
-tracks/20/interp = 0
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"times": PackedFloat32Array(0, 0.07, 0.5, 1, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 2,
-"values": [2, 0, 0, 2, 2, 2]
-}
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("SpriteRoot/FootRight:z_index")
-tracks/21/interp = 0
-tracks/21/loop_wrap = true
-tracks/21/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.07, 1.5, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 2,
-"values": [2, 2, 2, 0, 0, 2]
-}
 
 [sub_resource type="Animation" id="Animation_kp68e"]
 resource_name = "move_right"
 length = 2.0
 loop_mode = 1
 step = 0.0333333
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteRoot/Body:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 2)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteRoot/Body:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-54.775, -0.25, 0, 0.25, 0, -54.775, -0.25, 0, 0.25, 0, -54.775, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 2)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("SpriteRoot/Body/Head:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 2)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("SpriteRoot/Body/Head:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-44.635, -0.25, 0, 0.25, 0, -43.225, -0.25, 0, 0.25, 0, -44.635, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 2)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("SpriteRoot/Body/ControlCenter:position:x")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("SpriteRoot/Body/ControlCenter:position:y")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-5.94, -0.25, 0, 0.25, 0, -5.94, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 2)
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position:x")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 2, 1, 1),
-"points": PackedFloat32Array(5, 0, 0, 0, 0, -12, 0, 0, 0, 0, -27, 0, 0, 0, 0, 5, 0, 0, 0, 0, 18, 0, 0, 0, 0, 21, 0, 0, 0, 0, 5, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.25, 0.5, 1, 1.28, 1.5, 2)
-}
-tracks/7/type = "bezier"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("SpriteRoot/Body/ControlCenter/HandLeft:position:y")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 2, 1, 1),
-"points": PackedFloat32Array(10.715, 0, 0, 0, 0, 12.715, 0, 0, 0, 0, 0.715, 0, 0, 0, 0, 10.715, 0, 0, 0, 0, 12.715, 0, 0, 0, 0, 2.715, 0, 0, 0, 0, 10.715, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.25, 0.5, 1, 1.28, 1.5, 2)
-}
-tracks/8/type = "bezier"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position:x")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 2, 1, 1),
-"points": PackedFloat32Array(1, 0, 0, 0, 0, 16, 0, 0, 0, 0, 26, 0, 0, 0, 0, 1, 0, 0, 0, 0, -17, 0, 0, 0, 0, -25, 0, 0, 0, 0, 1, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.25, 0.5, 1, 1.28, 1.5, 2)
-}
-tracks/9/type = "bezier"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("SpriteRoot/Body/ControlCenter/HandRight:position:y")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 2, 1, 1),
-"points": PackedFloat32Array(12.715, 0, 0, 0, 0, 11.715, 0, 0, 0, 0, -1.285, 0, 0, 0, 0, 12.715, 0, 0, 0, 0, 13.715, 0, 0, 0, 0, 3.715, 0, 0, 0, 0, 12.715, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.25, 0.5, 1, 1.28, 1.5, 2)
-}
-tracks/10/type = "bezier"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("SpriteRoot/FootLeft:position:x")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 1, 1),
-"points": PackedFloat32Array(0, 0, 0, 0, 0, -19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5, 1, 1.25, 1.5, 2)
-}
-tracks/11/type = "bezier"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("SpriteRoot/FootLeft:position:y")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 1, 1),
-"points": PackedFloat32Array(-11, 0, 0, 0, 0, -11, 0, 0, 0, 0, -14, 0, 0, 0, 0, -19, 0, 0, 0, 0, -11, 0, 0, 0, 0, -11, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5, 1, 1.25, 1.5, 2)
-}
-tracks/12/type = "bezier"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("SpriteRoot/FootRight:position:x")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 1, 1),
-"points": PackedFloat32Array(0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.25, 0.5, 1, 1.5, 2)
-}
-tracks/13/type = "bezier"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("SpriteRoot/FootRight:position:y")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"handle_modes": PackedInt32Array(1, 2, 2, 2, 1, 1),
-"points": PackedFloat32Array(-14, 0, 0, 0, 0, -19, 0, 0, 0, 0, -11, 0, 0, 0, 0, -11, 0, 0, 0, 0, -11, 0, 0, 0, 0, -14, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.25, 0.5, 1, 1.5, 2)
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_775wm"]
 _data = {
@@ -1002,21 +46,20 @@ _data = {
 }
 
 [node name="Charactor" type="Node2D" node_paths=PackedStringArray("charactor_body_part")]
-y_sort_enabled = true
 script = ExtResource("1_0bsi0")
 charactor_body_part = NodePath("SpriteRoot")
 
 [node name="SpriteRoot" type="Node2D" parent="." node_paths=PackedStringArray("sprite_body_part_head", "sprite_body_part_body", "sprite_body_part_hand_left", "sprite_body_part_hand_right", "sprite_body_part_foot_left", "sprite_body_part_foot_right")]
 script = ExtResource("2_775wm")
-sprite_body_part_head = NodePath("Body/Head/RandSprite_Head")
+sprite_body_part_head = NodePath("Head/RandSprite_Head")
 sprite_body_part_body = NodePath("Body/RandSprite_Body")
-sprite_body_part_hand_left = NodePath("Body/ControlCenter/HandLeft/RandSprite_HandLeft")
-sprite_body_part_hand_right = NodePath("Body/ControlCenter/HandRight/RandSprite_HandRight")
+sprite_body_part_hand_left = NodePath("HandLeft/RandSprite_HandLeft")
+sprite_body_part_hand_right = NodePath("HandRight/RandSprite_HandRight")
 sprite_body_part_foot_left = NodePath("FootLeft/RandSprite_FootLeft")
 sprite_body_part_foot_right = NodePath("FootRight/RandSprite_FootRight")
 
 [node name="Body" type="Node2D" parent="SpriteRoot"]
-position = Vector2(0, -54.775)
+position = Vector2(-2, -50)
 
 [node name="RandSprite_Body" type="Sprite2D" parent="SpriteRoot/Body"]
 texture = ExtResource("2_ju7ad")
@@ -1025,40 +68,30 @@ script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
-[node name="Head" type="Node2D" parent="SpriteRoot/Body"]
-position = Vector2(0, -44.635)
+[node name="Head" type="Node2D" parent="SpriteRoot"]
+position = Vector2(-2, -83)
 
-[node name="RandSprite_Head" type="Sprite2D" parent="SpriteRoot/Body/Head"]
+[node name="RandSprite_Head" type="Sprite2D" parent="SpriteRoot/Head"]
 texture = ExtResource("3_ju7ad")
 hframes = 8
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
-[node name="ControlCenter" type="Node2D" parent="SpriteRoot/Body"]
-position = Vector2(0, -5.94)
+[node name="HandLeft" type="Node2D" parent="SpriteRoot"]
+position = Vector2(-27, -56)
 
-[node name="HandLeft" type="Node2D" parent="SpriteRoot/Body/ControlCenter"]
-position = Vector2(-35.94, 2)
-
-[node name="RandSprite_HandLeft" type="Sprite2D" parent="SpriteRoot/Body/ControlCenter/HandLeft"]
+[node name="RandSprite_HandLeft" type="Sprite2D" parent="SpriteRoot/HandLeft"]
 texture = ExtResource("4_0bsi0")
 hframes = 8
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
-[node name="DebugZOffset" type="Node2D" parent="SpriteRoot/Body/ControlCenter/HandLeft" node_paths=PackedStringArray("debug_target")]
-script = ExtResource("7_v0hu0")
-debug_target = NodePath("..")
-debug_label_scene = ExtResource("8_kp68e")
-metadata/_custom_type_script = "uid://co8603q2ydeqb"
+[node name="HandRight" type="Node2D" parent="SpriteRoot"]
+position = Vector2(18, -52)
 
-[node name="HandRight" type="Node2D" parent="SpriteRoot/Body/ControlCenter"]
-z_index = 2
-position = Vector2(35.525, 0)
-
-[node name="RandSprite_HandRight" type="Sprite2D" parent="SpriteRoot/Body/ControlCenter/HandRight"]
+[node name="RandSprite_HandRight" type="Sprite2D" parent="SpriteRoot/HandRight"]
 texture = ExtResource("4_0bsi0")
 flip_h = true
 hframes = 8
@@ -1066,14 +99,12 @@ script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
-[node name="DebugZOffset" type="Node2D" parent="SpriteRoot/Body/ControlCenter/HandRight" node_paths=PackedStringArray("debug_target")]
-script = ExtResource("7_v0hu0")
-debug_target = NodePath("..")
-debug_label_scene = ExtResource("8_kp68e")
-metadata/_custom_type_script = "uid://co8603q2ydeqb"
+[node name="Bown" parent="SpriteRoot/HandRight" instance=ExtResource("9_kp68e")]
+position = Vector2(-8.525, -4.285)
+rotation = 0.833766
 
 [node name="FootLeft" type="Node2D" parent="SpriteRoot"]
-position = Vector2(-11.52, -10.965)
+position = Vector2(-13, -11)
 
 [node name="RandSprite_FootLeft" type="Sprite2D" parent="SpriteRoot/FootLeft"]
 texture = ExtResource("6_0bsi0")
@@ -1083,7 +114,7 @@ metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
 
 [node name="FootRight" type="Node2D" parent="SpriteRoot"]
-position = Vector2(13.43, -11.045)
+position = Vector2(15, -12)
 
 [node name="RandSprite_FootRight" type="Sprite2D" parent="SpriteRoot/FootRight"]
 texture = ExtResource("6_0bsi0")
