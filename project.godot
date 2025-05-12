@@ -21,6 +21,10 @@ Enums="*res://Scripts/Data/define_enums.gd"
 GameGlobal="*res://Scripts/GameLogic/game_global.gd"
 Pandora="*res://addons/pandora/api.gd"
 
+[display]
+
+window/vsync/vsync_mode=0
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gdUnit4/plugin.cfg", "res://addons/pandora/plugin.cfg")
