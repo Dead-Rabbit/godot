@@ -38,7 +38,7 @@ position = Vector2(420, 419)
 texture = ExtResource("2_egkgu")
 offset = Vector2(0, -20)
 hframes = 8
-frame = 6
+frame = 7
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
@@ -48,7 +48,7 @@ position = Vector2(498, 447)
 texture = ExtResource("2_egkgu")
 offset = Vector2(0, -20)
 hframes = 8
-frame = 5
+frame = 6
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
@@ -58,7 +58,7 @@ position = Vector2(552, 376)
 texture = ExtResource("2_egkgu")
 offset = Vector2(0, -20)
 hframes = 8
-frame = 7
+frame = 6
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
@@ -68,7 +68,7 @@ position = Vector2(439, 429)
 texture = ExtResource("2_egkgu")
 offset = Vector2(0, -20)
 hframes = 8
-frame = 5
+frame = 2
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 
@@ -78,6 +78,6 @@ scale = Vector2(1.8, 1.8)
 texture = ExtResource("6_pwe2l")
 offset = Vector2(0, -59.34)
 hframes = 5
-frame = 1
+frame = 2
 script = ExtResource("3_pwe2l")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"

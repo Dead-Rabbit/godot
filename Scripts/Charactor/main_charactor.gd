@@ -6,6 +6,8 @@ var CharactorPart = Enums.CharactorPart
 @onready var charactor_body_part_controller: CharactorBodyPartController = $SpriteRoot
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 
+@export var move_speed: float = 100
+
 # 移动速度
 var velocity: Vector2 = Vector2.ZERO
 # 角色朝向
@@ -26,7 +28,6 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
-	var move_speed = 200
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
@@ -69,10 +70,11 @@ func update_animation() -> void:
 	var blend_time: float = 0.1
 	var anim_speed: float = 1.0
 	var pre_animation_name: String = anim_player.current_animation
+	
 	if charactor_forward == Enums.CharactorForward.UP or charactor_forward == Enums.CharactorForward.DOWN:
 		if velocity.length() > 0:
 			anim_name = "move_down"
-			anim_speed = 3.6
+			anim_speed = 4
 		else:
 			anim_name = "idle_down"
 	
