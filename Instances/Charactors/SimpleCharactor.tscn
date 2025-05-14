@@ -862,7 +862,7 @@ ik_node = NodePath("../AimCenter/IK_HandLeft")
 [node name="RandSprite_HandLeft" type="Sprite2D" parent="SpriteRoot/HandLeft"]
 texture = ExtResource("4_0bsi0")
 hframes = 8
-frame = 4
+frame = 2
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -878,7 +878,7 @@ ik_node = NodePath("../AimCenter/IK_HandRight")
 texture = ExtResource("4_0bsi0")
 flip_h = true
 hframes = 8
-frame = 7
+frame = 6
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -893,7 +893,7 @@ body_part_type = 1
 [node name="RandSprite_Head" type="Sprite2D" parent="SpriteRoot/Head"]
 texture = ExtResource("3_ju7ad")
 hframes = 8
-frame = 4
+frame = 7
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -909,7 +909,6 @@ body_part_type = 2
 [node name="RandSprite_Body" type="Sprite2D" parent="SpriteRoot/Body"]
 texture = ExtResource("2_ju7ad")
 hframes = 8
-frame = 1
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -925,7 +924,6 @@ body_part_type = 6
 texture = ExtResource("6_0bsi0")
 flip_h = true
 hframes = 8
-frame = 1
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -953,6 +951,7 @@ position = Vector2(0, -56)
 position = Vector2(39, 0)
 
 [node name="IK_HandLeft" type="Node2D" parent="SpriteRoot/AimCenter"]
+position = Vector2(-38, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
