@@ -1,3 +1,5 @@
+@tool
+
 extends Node2D
 class_name CharactorBodyPart
 
@@ -10,4 +12,7 @@ class_name CharactorBodyPart
 @export var ik_node: Node2D
 
 func _process(delta: float) -> void:
-	pass
+	if ik_node:
+		global_position = ik_node.global_position
+		pass
+		

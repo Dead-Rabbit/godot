@@ -29,6 +29,13 @@ var body_part_source_map: Dictionary = {
    Enums.CharactorPart.FOOT_RIGHT: null,
 }
 
+@export_group("Debug")
+@export var debug_body_part_suit: BodyPartSuit:
+	set(new_suit):
+		debug_body_part_suit = new_suit
+		if Engine.is_editor_hint():
+			set_body_part_suit(debug_body_part_suit)
+
 
 func _ready() -> void:
 	set_body_part_dic_cache(Enums.CharactorPart.HEAD, body_part_head)
