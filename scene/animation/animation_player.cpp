@@ -357,6 +357,8 @@ void AnimationPlayer::_blend_post_process() {
 		end_notify = false;
 	}
 	tmp_from = ObjectID();
+
+	emit_signal(SNAME("animation_step_changed"));
 }
 
 void AnimationPlayer::queue(const StringName &p_name) {
@@ -1032,6 +1034,8 @@ void AnimationPlayer::_bind_methods() {
 
 	ADD_SIGNAL(MethodInfo(SNAME("current_animation_changed"), PropertyInfo(Variant::STRING, "name")));
 	ADD_SIGNAL(MethodInfo(SNAME("animation_changed"), PropertyInfo(Variant::STRING_NAME, "old_name"), PropertyInfo(Variant::STRING_NAME, "new_name")));
+
+	ADD_SIGNAL(MethodInfo(SNAME("animation_step_changed")));
 }
 
 AnimationPlayer::AnimationPlayer() {
