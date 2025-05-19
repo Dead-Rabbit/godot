@@ -437,6 +437,28 @@ tracks/11/keys = {
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("SpriteRoot/HandRight:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"points": PackedFloat32Array(28, 0, 0, 0, 0, 26, 0, 0, 0, 0, 18, 0, 0, 0, 0, 26, 0, 0, 0, 0, 28, 0, 0, 0, 0, 24, 0, 0, 0, 0, 14, 0, 0, 0, 0, 23, 0, 0, 0, 0, 28, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("SpriteRoot/HandRight:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"points": PackedFloat32Array(-48, 0, 0, 0, 0, -37, 0, 0, 0, 0, -29, 0, 0, 0, 0, -39, 0, 0, 0, 0, -48, 0, 0, 0, 0, -64, 0, 0, 0, 0, -77, 0, 0, 0, 0, -64, 0, 0, 0, 0, -48, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2)
+}
 
 [sub_resource type="Animation" id="Animation_4keul"]
 resource_name = "idle_right"
@@ -790,7 +812,7 @@ ik_node = NodePath("../IK_AimCenter/IK_HandRight")
 texture = ExtResource("4_0bsi0")
 flip_h = true
 hframes = 8
-frame = 5
+frame = 3
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -805,7 +827,7 @@ body_part_type = 1
 [node name="RandSprite_Head" type="Sprite2D" parent="SpriteRoot/Head"]
 texture = ExtResource("3_ju7ad")
 hframes = 8
-frame = 4
+frame = 3
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -821,7 +843,6 @@ body_part_type = 2
 [node name="RandSprite_Body" type="Sprite2D" parent="SpriteRoot/Body"]
 texture = ExtResource("2_ju7ad")
 hframes = 8
-frame = 7
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -837,7 +858,7 @@ body_part_type = 6
 texture = ExtResource("6_0bsi0")
 flip_h = true
 hframes = 8
-frame = 5
+frame = 6
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -853,7 +874,7 @@ body_part_type = 5
 [node name="RandSprite_FootLeft" type="Sprite2D" parent="SpriteRoot/FootLeft"]
 texture = ExtResource("6_0bsi0")
 hframes = 8
-frame = 5
+frame = 3
 script = ExtResource("4_2ximk")
 metadata/_custom_type_script = "uid://brkejnyx31qeq"
 metadata/_edit_lock_ = true
@@ -865,7 +886,7 @@ position = Vector2(0, -60)
 position = Vector2(-45, 0)
 
 [node name="IK_HandRight" type="Node2D" parent="SpriteRoot/IK_AimCenter"]
-position = Vector2(44, 0)
+position = Vector2(45, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

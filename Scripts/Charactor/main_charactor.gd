@@ -15,6 +15,8 @@ var charactor_forward : Enums.CharactorForward = Enums.CharactorForward.NONE
 
 # 角色部位
 func _ready() -> void:
+	anim_player.connect("animation_step_changed", _on_animation_step)
+	
 	GameGlobal.GMainCharactor = self
 	
 	var suit_default_entity = Pandora.get_entity(BodyPartEntityIds.BODYPARTSUIT_DEFAULT)
@@ -54,7 +56,7 @@ func _process(delta: float) -> void:
 		
 	update_animation()
 
-
+	
 func set_charactor_forward(_forward : Enums.CharactorForward) -> void:
 	if charactor_forward == _forward:
 		return
@@ -63,6 +65,8 @@ func set_charactor_forward(_forward : Enums.CharactorForward) -> void:
 	charactor_body_part_controller.set_charactor_forward(charactor_forward)
 	update_animation()
 
+
+#region Animation
 
 # TODO 先简单播放动画，后面处理到 Animation Tree 中
 func update_animation() -> void:
@@ -90,7 +94,20 @@ func update_animation() -> void:
 
 #		$SpriteRoot.scale.x = (-1 if charactor_forward == Enums.CharactorForward.LEFT else 1)
 
-	if pre_animation_name == anim_name:
-		return
+	if pre_animation_name != anim_name:
+		anim_player.play(anim_name, blend_time, anim_speed, true)
+
 		
-	anim_player.play(anim_name, blend_time, anim_speed, true)
+	
+# 相应动画事件
+func _on_animation_step() -> void:
+	animation_modifyer()
+
+	
+# 动画修改器
+func animation_modifyer() -> void:
+	if charactor_body_part_controller:
+		charactor_body_part_controller.animation_modifyer()
+		
+
+#endregion Animation

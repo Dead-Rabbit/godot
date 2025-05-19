@@ -11,8 +11,11 @@ class_name CharactorBodyPart
 # IK 节点
 @export var ik_node: Node2D
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	pass
+
+
+func animation_modifyer() -> void:
 	if ik_node:
+		print(Enums.CharactorPartDebugStr[body_part_type], global_position)
 		global_position = ik_node.global_position
-		pass
-		

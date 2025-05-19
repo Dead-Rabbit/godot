@@ -123,3 +123,15 @@ func update_sort_order() -> void:
 		
 	
 #endregion Sort Order
+		
+		
+#region Animation
+
+# 动画修改器
+func animation_modifyer() -> void:
+	for body_part_key: Enums.CharactorPart in body_part_dic:
+		var body_part: CharactorBodyPart = body_part_dic[body_part_key]
+		body_part.animation_modifyer()
+		
+		
+#endregion Animation
